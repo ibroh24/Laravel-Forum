@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
+// This is also generated after running: php artisan eloquent-oauth:install
 class CreateOauthIdentitiesTable extends Migration
 {
     public function up()

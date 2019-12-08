@@ -165,7 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        // For social media authentication
         AdamWathan\EloquentOAuthL5\EloquentOAuthServiceProvider::class,
 
         /*

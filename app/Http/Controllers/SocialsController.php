@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use SocialAuth;
+use Illuminate\Http\Request;
+
 
 class SocialsController extends Controller
 {
@@ -15,7 +16,12 @@ class SocialsController extends Controller
     public function auth_callback($provider)
     {
         SocialAuth::login($provider, function($user, $details){
-            
+            $user->avatar = $details->avatar;
+            $user->email = $details->email;
+            $user->name = $details->name;
+            // $user->password = $details->password;
+            $user->save();
         });
+        return redirect('/home');
     }
 }

@@ -19,3 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('{provider}/auth', 'SocialsController@auth')->name('media.auth');
+Route::get('{provider}/redirect', 'SocialController@auth_callback')->name('callback.auth');
